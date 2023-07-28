@@ -1,8 +1,15 @@
 import React from 'react'
+import Navbar from './components/Navbar'
+import SearchBar from './components/SearchBar'
+import MovieCard from './components/MovieCard'
 
 function App() {
   return (
-    <h3 className='text-2xl'>Hwllo world</h3>
+    <div>
+      <Navbar/>
+      <SearchBar/>
+      <MovieCard/>
+    </div>
   )
 }
 
