@@ -1,20 +1,25 @@
 import React from 'react'
 
-function SearchBar ({SearchBar, setSearchMovie,fetchMovieData}) {
+function SearchBar({searchMovie, setSearchMovie,fetchMovieData}) {
   return (
-   <div>
-    <div className='main mt-5 flex justify-center'>
-<input className='bg-gray-100 placeholder-gray-500 outline-none px-7 py-1 border-rounded-sm' type='text' placeholder='Search Here'>
-value={setSearchMovie}
-onchange={(e) => setSearchMovie(e.target.value)}
-</input>
-<button 
-onClick={fetchMovieData}
-className='bg-black text-white px-4 py-1 rounded-sm'>
-    Search
-</button>
+    <div>
+      <div className="input flex justify-center  px-5 lg:px-0 py-5">
+        <input
+          type="text"
+          placeholder='Search here'
+          value={searchMovie}
+          onChange={(e)=> setSearchMovie(e.target.value)}
+          className=' shadow-md bg-gray-200 placeholder-gray-400 rounded-l-lg 
+          px-2 py-2 w-80 outline-none border-2 border-gray-500 text-black ' 
+        />
+        <button
+        onClick={fetchMovieData}
+          className='bg-yellow-600 px-4 rounded-r-lg text-white shadow-md 
+          border-b-2 border-r-2 border-t-2 text-black border-gray-500 '>
+          Search
+        </button>
+      </div>
     </div>
-   </div>
   )
 }
 
